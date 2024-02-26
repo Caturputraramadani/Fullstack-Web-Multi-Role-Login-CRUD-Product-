@@ -1,0 +1,100 @@
+// Create User
+POST http://localhost:5000/users
+Content-Type:  application/json
+
+{
+    "name": "Harry Potter",
+    "email": "harry@gmail.com",
+    "password" : "123456",
+    "confPassword": "123456",
+    "role": "admin"
+    
+}
+
+### 
+// get All Users
+GET http://localhost:5000/users
+
+###
+// get Single User 
+GET http://localhost:5000/users/8f485ef1-6215-4026-ae84-78ca2faeca69
+
+###
+// Update User
+PATCH http://localhost:5000/users/8f485ef1-6215-4026-ae84-78ca2faeca69
+Content-Type:  application/json
+
+{
+    "name": "Harry",
+    "email": "harry@gmail.com",
+    "password" : "",
+    "confPassword": "",
+    "role": "admin"
+    
+}
+
+###
+//Delete User 
+DELETE http://localhost:5000/users/8f485ef1-6215-4026-ae84-78ca2faeca69
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type:  application/json
+
+{
+    "email": "harmonie@gmail.com",
+    "password" : "123456"
+    
+}
+
+###
+//Login Admin
+POST http://localhost:5000/login
+Content-Type:  application/json
+
+{
+    "email": "harry@gmail.com",
+    "password" : "123456"
+    
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE http://localhost:5000/logout
+
+###
+// Get All Products
+GET http://localhost:5000/products
+
+###
+// Get Single products
+GET http://localhost:5000/products/e4a23424-09db-48bc-b4b1-d3351f835ba6
+
+###
+// POST Data
+POST http://localhost:5000/products
+Content-Type:  application/json
+
+{
+    "name": "Product 6",
+    "price" : 992
+    
+}
+
+###
+// POST Data
+PATCH http://localhost:5000/products/e4a23424-09db-48bc-b4b1-d3351f835ba6
+Content-Type:  application/json
+
+{
+    "name": "Product Updated",
+    "price" : 99211
+    
+}
+
+###
+// DELETING PRODUCT
+DELETE http://localhost:5000/products/598eecc5-c1ff-4e52-83fe-024f52f551cd
